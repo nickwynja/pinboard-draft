@@ -75,8 +75,9 @@ for i in range(18):
             postSlug = slugify(post['description'])
             postTitle = post['description']
             postText = post['extended']
-            metatmp = '/tmp/pin_draft.meta'
-            with open(metatmp, 'r+') as f:
+            metatmp = 'pin_draft.meta'
+            meta = ''
+            with open(metatmp, 'w+') as f:
               meta = f.read()
               f.close()
            
